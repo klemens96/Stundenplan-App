@@ -30,6 +30,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.app.LauncherActivity" />
         </activity>
+        <activity
+            android:name="com.smartplan.DayView"
+            android:label="@string/title_activity_day_view" >
+        </activity>
     </application>
 
 </manifest>

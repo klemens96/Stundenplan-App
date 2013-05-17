@@ -19,7 +19,7 @@ public class Timetable {
 		field[x][y] = newSubject; 
 	}
 	
-	// Gibt die ersten drei Buchstaben des Faches wieder; diese können dann zB. in die Buttons der MainActivity eingetragen werden
+	// Gibt die ersten drei Buchstaben des Faches wieder; diese können dann z.B. in die Buttons der MainActivity eingetragen werden
 	public String substrSubject(int x, int y){
 		
 		Subject subject = field[x][y];
@@ -27,4 +27,22 @@ public class Timetable {
 		
 		return subjectName.substring(0,3); 
 	}
+	
+//	
+//	public String getTeacherBySubject(String searchsubject){
+//		String searchteacher = null; 
+//		
+//		for (int i = 0; i < daynr; i++){
+//			for (int j = 0; j < hournr; j++){
+//				String subject = field[i][j].getSubject(); 
+//				if (subject.compareToIgnoreCase(searchsubject) == 0){
+//					searchteacher = field[i][j].getTeacher(); 
+//					break; 
+//				}	
+//			}
+//		}
+//		
+//		return searchteacher; 
+//	}
+	
 }

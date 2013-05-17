@@ -1,14 +1,15 @@
 package com.smartplan;
 
-import com.example.smartplan.R;
-
-import android.os.Bundle;
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
-import android.annotation.TargetApi;
-import android.os.Build;
+import android.widget.TextView;
+
+import com.example.smartplan.R;
 
 public class EditActivity extends Activity {
 
@@ -18,6 +19,11 @@ public class EditActivity extends Activity {
 		setContentView(R.layout.activity_edit);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		String message = "  Bearbeiten!!!  "; 
+		TextView textView = new TextView(this);
+	    textView.setTextSize(20);
+	    textView.setText(message);
+	    setContentView(textView); 
 	}
 
 	/**
@@ -34,6 +40,7 @@ public class EditActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.edit, menu);
+		
 		return true;
 	}
 
