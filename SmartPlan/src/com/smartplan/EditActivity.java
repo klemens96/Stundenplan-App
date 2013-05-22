@@ -1,5 +1,8 @@
 package com.smartplan;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
@@ -7,23 +10,34 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.classes.Subject;
 import com.example.smartplan.R;
 
 public class EditActivity extends Activity {
-
+	
+	
+	public Spinner sp_day, sp_hour; 
+	public Button bt_submit; 
+	public EditText et_teacher, et_subject;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit);
 		// Show the Up button in the action bar.
 		setupActionBar();
-		String message = "  Bearbeiten!!!  "; 
-		TextView textView = new TextView(this);
-	    textView.setTextSize(20);
-	    textView.setText(message);
-	    setContentView(textView); 
+		addItemsOnSpinnerDay(); 
+		addItemsOnSpinnerHour();
+		addListenerOnButton(); 
 	}
 
 	/**
@@ -48,17 +62,137 @@ public class EditActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	//Implementierung der Methoden der Spinner
+	
+	public void addItemsOnSpinnerDay(){
+		sp_day = (Spinner) findViewById(R.id.Tagwahl);
+		List<String> list = new ArrayList<String>();
+		list.add("Montag");
+		list.add("Dienstag");
+		list.add("Mittwoch");
+		list.add("Donnerstag");
+		list.add("Freitag");
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+			android.R.layout.simple_spinner_item, list);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		sp_day.setAdapter(dataAdapter);
+	}
+	
+	public void addItemsOnSpinnerHour(){
+		sp_hour = (Spinner) findViewById(R.id.Stundenwahl);
+		List<String> list = new ArrayList<String>();
+		list.add("1. Stunde");
+		list.add("2. Stunde");
+		list.add("3. Stunde");
+		list.add("4. Stunde");
+		list.add("5. Stunde");
+		list.add("6. Stunde");
+		list.add("7. Stunde");
+		list.add("8. Stunde");
+		list.add("9. Stunde");
+		list.add("10. Stunde");
+		list.add("11. Stunde");
+		list.add("12. Stunde");
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+			android.R.layout.simple_spinner_item, list);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		sp_hour.setAdapter(dataAdapter);
+	}
+	
+	public void addListenerOnButton(){
+
+		sp_day = (Spinner) findViewById(R.id.Tagwahl);
+		sp_hour = (Spinner) findViewById(R.id.Stundenwahl);
+		bt_submit = (Button) findViewById(R.id.button_Edit);
+	 
+		bt_submit.setOnClickListener(new OnClickListener() {
+		@Override
+		public void onClick(View arg0) {
+			Toast.makeText(EditActivity.this,"Die eingegebenen Daten wurden in den Stundenplan eingetragen!" ,Toast.LENGTH_SHORT).show();
+			enterText(); 
+			
+		}
+	 
+		});
+	}
+	
+	public void enterText(){
+		String day = String.valueOf(sp_day.getSelectedItem());
+		String hour = String.valueOf(sp_hour.getSelectedItem());
+		String subject_name = et_subject.getText().toString();
+		String teacher_name = et_teacher.getText().toString(); 
+		
+		int d = -1 , h = -1; 
+		
+//		Umwandlung des Tages in einen Integer-Wert, dieser wird der Tages-Wert des Timetable-Feldes
+		if (day.equals("Montag")){
+			d = 0; 
+		}
+		if (day.equals("Dienstag")){
+			d = 1; 
+		}
+		if (day.equals("Mittwoch")){
+			d = 2; 
+		}
+		if (day.equals("Donnerstag")){
+			d = 3; 
+		}
+		if (day.equals("Freitag")){
+			d = 4; 
+		}
+		
+		
+//		Umwandlung der Stunde in einen Integer-Wert, dieser wird der Stunden-Wert des Timetable-Feldes
+		if (hour.equals("1. Stunde")){
+			h = 0; 
+		}
+		if (hour.equals("2. Stunde")){
+			h = 1; 
+		}
+		if (hour.equals("3. Stunde")){
+			h = 2; 
+		}
+		if (hour.equals("4. Stunde")){
+			h = 3; 
+		}
+		if (hour.equals("5. Stunde")){
+			h = 4; 
+		}
+		if (hour.equals("6. Stunde")){
+			h = 5; 
+		}
+		if (hour.equals("7. Stunde")){
+			h = 6; 
+		}
+		if (hour.equals("8. Stunde")){
+			h = 7; 
+		}
+		if (hour.equals("9. Stunde")){
+			h = 8; 
+		}
+		if (hour.equals("10. Stunde")){
+			h = 9; 
+		}
+		if (hour.equals("11. Stunde")){
+			h = 10; 
+		}
+		if (hour.equals("12. Stunde")){
+			h = 11; 
+		}
+		
+		Subject toEnter = new Subject(subject_name, teacher_name);
+		
+		if (d != -1 && h != -1){
+		MainActivity.tt.changeSubject(toEnter, d, h);
+		}
+	}
+	
 
 }

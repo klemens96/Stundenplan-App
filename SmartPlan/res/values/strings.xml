@@ -6,6 +6,11 @@
     <string name="title_activity_edit">Stundenplan bearbeiten</string>
     <string name="title_activity_main">Wochenansicht</string>
     <string name="title_activity_day_view">DayView</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="subject">Fach</string>
+    <string name="day">Tag</string>
+    <string	name="hour">Stundennr</string>
+    <string name="newedit">Eintragen</string>
+    <string name="teacher">Lehrername</string>
+    <string name="print">vorrübergehende Ausgabe</string>
 
 </resources>
