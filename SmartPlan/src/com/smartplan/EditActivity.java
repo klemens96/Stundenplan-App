@@ -19,7 +19,7 @@ public class EditActivity extends Activity {
 		setContentView(R.layout.activity_edit);
 		// Show the Up button in the action bar.
 		setupActionBar();
-		String message = "  Bearbeiten!!!  "; 
+		String message = "  Bearbeiten!!!!  "; 
 		TextView textView = new TextView(this);
 	    textView.setTextSize(20);
 	    textView.setText(message);
