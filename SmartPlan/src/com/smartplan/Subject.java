@@ -1,4 +1,4 @@
-package com.classes; 
+package com.smartplan; 
 
 
 public class Subject {

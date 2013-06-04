@@ -1,10 +1,11 @@
-package com.classes; 
+package com.smartplan; 
+
 
 
 public class Timetable {
 	
 //	Feld zur Verwaltung aller Fächer der Woche
-	Subject [][] field; 
+	static Subject [][] field; 
 	int daynr; 
 	int hournr; 
 	
@@ -15,12 +16,12 @@ public class Timetable {
 	}
 	
 //	Ändert den Speicherplatz im angegebenen Feld auf das angegebe Fach
-	public void changeSubject(Subject newSubject, int x, int y){
+	public static void changeSubject(Subject newSubject, int x, int y){
 		field[x][y] = newSubject; 
 	}
 	
 //	Gibt die ersten drei Buchstaben des Faches wieder; diese können dann z.B. in die Buttons der MainActivity eingetragen werden
-	public String substrSubject(int x, int y){
+	public static String substrSubject(int x, int y){
 		
 		Subject subject = field[x][y];
 		String subjectName = subject.getSubject();

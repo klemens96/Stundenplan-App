@@ -2,6 +2,7 @@ package com.smartplan;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,20 +10,43 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.Toast;
 
-import com.classes.Timetable;
 import com.example.smartplan.R;
 
 public class MainActivity extends Activity {
-
-	static Timetable tt; 
+ 
 	Button bt_print;
+	
+	public MainActivity(){
+		
+	}
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        
+//        TableLayout layout = new TableLayout (this);
+//        layout.setLayoutParams( new TableLayout.LayoutParams(5 , 12) );
+//
+//        layout.setPadding(1,1,1,1);
+//
+//        for (int f=0; f<=13; f++) {
+//            TableRow tr = new TableRow(this);
+//            for (int c=0; c<=5; c++) {
+//                Button b = new Button (this);
+//                b.setText(Timetable.substrSubject(c, f));
+//                b.setTextSize(10.0f);
+//                b.setTextColor(Color.rgb( 100, 200, 200));
+//                b.setOnClickListener((OnClickListener) this);
+//                tr.addView(b, 30,30);
+//            } // for
+//            layout.addView(tr);
+//        } // for
+
     }
 
     
@@ -47,24 +71,25 @@ public class MainActivity extends Activity {
     	return true;
     }
     
-    public void addListenerOnButton(){
-
-		bt_print = (Button) findViewById(R.id.button_Print);
-	 
-		bt_print.setOnClickListener(new OnClickListener() {
-		@Override
-		public void onClick(View arg0) {
-			printOutTT(); 
-			
-		}
-	 
-		});
-	}
+//    public void addListenerOnButton(){
+//
+//		bt_print = (Button) findViewById(R.id.button_Print);
+//	 
+//		bt_print.setOnClickListener(new OnClickListener() {
+//		@Override
+//		public void onClick(View arg0) {
+//			printOutTT(); 
+//			
+//		}
+//	 
+//		});
+//	}
     
-    public void printOutTT (){
-    	for(int i = 0; i < 5; i++)
-    		for (int j = 0; j < 12; j++){
-    			System.out.println(tt.substrSubject(i, j));
-    		}
-    }
+    
+//	Ändert den Speicherplatz im angegebenen Feld auf das angegebene Fach
+	public static void changeSubject(Subject newSubject, int x, int y){
+			Timetable.changeSubject(newSubject, x, y);
+	}
+	
+
 }

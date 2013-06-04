@@ -18,7 +18,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.classes.Subject;
 import com.example.smartplan.R;
 
 public class EditActivity extends Activity {
@@ -107,13 +106,12 @@ public class EditActivity extends Activity {
 	}
 	
 	public void addListenerOnButton(){
-
-		sp_day = (Spinner) findViewById(R.id.Tagwahl);
-		sp_hour = (Spinner) findViewById(R.id.Stundenwahl);
+		
 		bt_submit = (Button) findViewById(R.id.button_Edit);
 	 
 		bt_submit.setOnClickListener(new OnClickListener() {
-		@Override
+		
+			@Override
 		public void onClick(View arg0) {
 			Toast.makeText(EditActivity.this,"Die eingegebenen Daten wurden in den Stundenplan eingetragen!" ,Toast.LENGTH_SHORT).show();
 			enterText(); 
@@ -124,12 +122,16 @@ public class EditActivity extends Activity {
 	}
 	
 	public void enterText(){
-		String day = String.valueOf(sp_day.getSelectedItem());
-		String hour = String.valueOf(sp_hour.getSelectedItem());
+		sp_day = (Spinner) findViewById(R.id.Tagwahl);
+		sp_hour = (Spinner) findViewById(R.id.Stundenwahl);
+//		String day = String.valueOf(sp_day.getSelectedItem());
+//		String hour = String.valueOf(sp_hour.getSelectedItem());
+		String day = sp_day.getSelectedView().toString(); 
+		String hour = sp_hour.getSelectedView().toString(); 
 		String subject_name = et_subject.getText().toString();
 		String teacher_name = et_teacher.getText().toString(); 
 		
-		int d = -1 , h = -1; 
+		int d = 0 , h = 0; 
 		
 //		Umwandlung des Tages in einen Integer-Wert, dieser wird der Tages-Wert des Timetable-Feldes
 		if (day.equals("Montag")){
@@ -188,10 +190,8 @@ public class EditActivity extends Activity {
 		}
 		
 		Subject toEnter = new Subject(subject_name, teacher_name);
+		Timetable.changeSubject(toEnter, d, h); 
 		
-		if (d != -1 && h != -1){
-		MainActivity.tt.changeSubject(toEnter, d, h);
-		}
 	}
 	
 

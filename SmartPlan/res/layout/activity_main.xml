@@ -8,7 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
     
-     <Button
+    <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+    
+
+    <!--
+         <Button
         android:id="@+id/button_Print"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,5 +24,582 @@
         android:layout_marginTop="16dp"
         android:layout_weight="0"
         android:text="@string/print" />
+    -->
+            
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+        
+
+     	<TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+          
+
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_weight="2"
+               android:layout_height="match_parent"
+               android:text="" />
+           
+           <TextView
+               android:id="@+id/textView3a"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="Montag" />
+           
+           <TextView
+               android:id="@+id/textView4a"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="Dienstag" />
+           
+           <TextView
+               android:id="@+id/textView5a"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="Mittwoch" />
+           
+           <TextView
+               android:id="@+id/textView6a"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="Donnerstag" />
+           
+           <TextView
+               android:id="@+id/textView7a"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="Freitag" />
+           
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView_hour1"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1. Stunde" />
+
+            <Button
+                android:id="@+id/button1a"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2a"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3a"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4a"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5a"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour2"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2. Stunde" />
+
+            <Button
+                android:id="@+id/button1b"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2b"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3b"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4b"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5b"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour3"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3. Stunde" />
+
+            <Button
+                android:id="@+id/button1c"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2c"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3c"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4c"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5c"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+        
+        <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour4"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="4. Stunde" />
+
+            <Button
+                android:id="@+id/button1d"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2d"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3d"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4d"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5d"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour5"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="5. Stunde" />
+
+            <Button
+                android:id="@+id/button1e"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2e"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3e"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4e"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5e"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour6"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="6. Stunde" />
+
+            <Button
+                android:id="@+id/button1f"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2f"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3f"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4f"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5f"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour7"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="7. Stunde" />
+
+            <Button
+                android:id="@+id/button1g"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2g"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3g"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4g"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5g"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour8"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="8. Stunde" />
+
+            <Button
+                android:id="@+id/button1h"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2h"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3h"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4h"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5h"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour9"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="9. Stunde" />
+
+            <Button
+                android:id="@+id/button1i"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2i"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3i"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4i"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5i"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour10"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="10. Stunde" />
+
+            <Button
+                android:id="@+id/button1j"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2j"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3j"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4j"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5j"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour11"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="11. Stunde" />
+
+            <Button
+                android:id="@+id/button1k"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2k"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3k"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4k"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5k"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textView_hour12"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="12. Stunde" />
+
+            <Button
+                android:id="@+id/button1l"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button2l"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button3l"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button4l"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button5l"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="" />
+        </TableRow>
+
+    </TableLayout>
+
+    </ScrollView> 
 
 </RelativeLayout>
